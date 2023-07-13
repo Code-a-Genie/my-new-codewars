@@ -12,13 +12,17 @@
 //   if (b.length === 0) {
 //     return a;
 //   }
-//   for (let i = 0; i < b.length; i++) {
-//     const item = b[i];
-//     a.filter((element)=> {
-//       if(element!==item){
-//         newArray.push(element)
+//   for (let i = 0; i < a.length; i++) {
+//     const item = a[i];
+//     let isSimilar = false;
+//     b.filter((element) => {
+//       if (element === item) {
+//         isSimilar = true;
 //       }
-//     })
+//     });
+//     if (isSimilar === false) {
+//       newArray.push(item);
+//     }
 //   }
 //   console.log(newArray);
 //   return newArray;
@@ -27,48 +31,57 @@
 
 // function arrayDiff(a, b) {
 //     const result = [];
-  
+
 //     for (let i = 0; i < a.length; i++) {
 //       const currentValue = a[i];
 //       let foundInB = false;
-  
+
 //       for (let j = 0; j < b.length; j++) {
 //         if (b[j] === currentValue) {
 //           foundInB = true;
 //           break;
 //         }
 //       }
-  
+
 //       if (!foundInB) {
 //         result.push(currentValue);
 //       }
 //     }
-  
+
 //     return result;
 //   }
-  
+
 //   // Example usage
 //   console.log(arrayDiff([1, 2], [1]));               // Output: [2]
 //   console.log(arrayDiff([1, 2, 2, 2, 3], [2]));      // Output: [1, 3]
 
+// function arrayDiff(a ,b){
+//     const result = []
+//     for(let i = 0; i < a.length; i++){
+//         const currentValue =a[i]
+//         let foundInB = false;
 
-function arrayDiff(a ,b){
-    const result = []
-    for(let i = 0; i < a.length; i++){
-        const currentValue =a[i]
-        let foundInB = false;
+//         for(let j=0; j<b.lenth;j++) {
+//             if(b[j]===currentValue){
+//                 foundInB =true;
+//             }
 
-        for(let j=0; j<b.lenth;j++) {
-            if(b[j]===currentValue){
-                foundInB =true;
-            }
+//             }
+//             if(!foundInB){
+//                 result.push(currentValue)
+//             }
+//         }
+//         return result
+//     }
 
-            }
-            if(!foundInB){
-                result.push(currentValue)
-            }
-        }
-        return result
-    }
 
-  
+
+const myArray = ["apple","mango","pear","watermelon","orange"]
+// for (let i = 0; i < myArray.length; i++) {
+//     const element = myArray[i];
+//     console.log(element)
+    
+// }
+myArray.map((item,index) => {
+    console.log(myArray[index]);
+})
