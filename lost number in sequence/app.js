@@ -9,34 +9,73 @@
 
 // Note: N may be 1 or less (in the latter case, the first array will be []).
 
-function findDeletedNumber(arr, mixArr) {
-  let result = []
+// function findDeletedNumber(arr, mixArr) {
+//   let result = []
   
-  for( let i = 0; i< arr.length ; i++){
-    let firstArray = arr[i]
-    let foundInSecondArray = false;
+//   for( let i = 0; i< arr.length ; i++){
+//     let firstArray = arr[i]
+//     let foundInSecondArray = false;
 
-    for(let j=0; j < mixArr.length; j++ ){
+//     for(let j=0; j < mixArr.length; j++ ){
       
-      if(mixArr[j]===firstArray){
-       foundInSecondArray = true;
-       break;
-      }
+//       if(mixArr[j]===firstArray){
+//        foundInSecondArray = true;
+//        break;
+//       }
     
-    }
-    if(!foundInSecondArray){
-      result.push(firstArray)
-    }
-  }
+//     }
+//     if(!foundInSecondArray){
+//       return result.push(firstArray)
+//     }
+//   }
 
-    if(result.length === 0){
-      return 0;
-    }else{
-      return result;
-    }
+//     if(result.length === 0){
+//       return 0;
+//     }else{
+//       return result;
+//     }
   
    
   
   
+//   }
+// console.log(findDeletedNumber([1,2,3,4,5,6,7,8,9], [3,2,4,6,8,1,7,5,9]))
+
+
+
+// function findDeletedNumber(arr, mixArr) {
+//   let result = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!mixArr.includes(arr[i])) {
+//       result.push(arr[i]);
+//     }
+//   }
+
+//   if (result.length === 0) {
+//     return 0;
+//   } else {
+//     return result[0];
+//   }
+// }
+
+function findDeletedNumber(arr, mixArr){
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++){
+    if(!mixArr.includes(arr[i])){
+       result.push(arr[i]);
+    }
   }
-console.log(findDeletedNumber([1,2,3,4,5,6,7,8,9], [3,2,4,6,8,1,7,5,9]))
+
+  if(result.length===0){
+    return 0;
+  }
+  // else{
+  //   return result[0];
+  // }
+  return parseInt(result,10);
+}
+
+
+console.log(findDeletedNumber([1,2,3,4,5,6,7,8,9], [3,2,4,6,7,8,]))
