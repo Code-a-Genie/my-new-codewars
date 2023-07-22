@@ -52,7 +52,7 @@
   //  console.log(solution('XCIX'))
 
   function  solution(roman) {
-let romanNum ={
+const romanNum ={
         'I': 1,
         'V': 5,
         'X': 10,
@@ -68,7 +68,7 @@ for(let i=0; i<roman.length;i++){
   const currentRoman = roman[i]
   const currentValue = romanNum[currentRoman];
 
-  if(i+1 < roman.length && romanNum[roman[i+1]>currentValue]){
+  if(i+1 < roman.length && romanNum[roman[i+1]]>currentValue){
     result -= currentValue;
   }
   else{
@@ -79,4 +79,4 @@ for(let i=0; i<roman.length;i++){
 return result;
 
   }
-  console.log(solution('XXIV'))
+  console.log(solution('VI'))
