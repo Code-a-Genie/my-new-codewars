@@ -11,17 +11,20 @@
 function likes(names) {
    const peopleThatLikes = names.length;
    if(peopleThatLikes===0){
-    return `no one likes this`
+    return 'no one likes this';
    }
    else if (peopleThatLikes===1){
     return `${names[0]} likes this`
    }
    else if (peopleThatLikes===2){
-    return `${names[0]} and ${names[1]} likes this`
+    return `${names[0]} and ${names[1]} like this`
    }
-   else {
+   else if (peopleThatLikes===3) {
+    return `${names[0]}, ${names[1]} , ${names[2]}like this`
+   }
+   else{
     return `${names[0]}, ${names[1]} and ${peopleThatLikes-2} others like this`
    }
 
   }
-console.log( likes(["max","alice","steve","genie"]) )
+console.log( likes(["Max","Alice","Steve","Genie"]) )
