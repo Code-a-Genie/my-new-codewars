@@ -10,7 +10,7 @@ function persistence(num) {
     let count = 0;
 
     while (num > 9){
-      num = num.toString().split('').reduce((acc,digit)=> acc * digit.parseInt(), 1);
+      num = num.toString().split('').reduce((acc,digit)=> acc * parseInt(digit), 1);
       count++
     }
     return count;
