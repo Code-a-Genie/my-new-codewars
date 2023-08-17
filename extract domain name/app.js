@@ -14,18 +14,36 @@
 
 
 
-function domainName(url) {
+// function domainName(url) {
+//     let domain = url;
+  
+//     // Remove protocol (http://, https://)
+//     domain = domain.replace(/(https?:\/\/)?(www\.)?/, '');
+  
+//     // Remove path and query string
+//     domain = domain.split('/')[0];
+  
+//     // Remove TLD (top-level domain) if present
+//     domain = domain.split('.')[0];
+  
+//     return domain;
+//   }
+
+  
+
+  function domain (url){
     let domain = url;
-  
-    // Remove protocol (http://, https://)
-    domain = domain.replace(/(https?:\/\/)?(www\.)?/, '');
-  
-    // Remove path and query string
-    domain = domain.split('/')[0];
-  
-    // Remove TLD (top-level domain) if present
-    domain = domain.split('.')[0];
-  
-    return domain;
+
+    //remove protocol
+    domain = domain.replace(/(https?:\/\/)?(www\.)?/, '')
+
+    //remove path and query string
+
+    domain = domain.split("/")[0];
+
+    //remove top level domain (.com)
+
+    domain = domain.split(".");
+
+     return domain;
   }
-  
