@@ -31,7 +31,7 @@
 
   
 
-  function domain (url){
+  function domainName (url){
     let domain = url;
 
     //remove protocol
@@ -43,7 +43,7 @@
 
     //remove top level domain (.com)
 
-    domain = domain.split(".");
+    domain = domain.split(".")[0];
 
      return domain;
   }
