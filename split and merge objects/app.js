@@ -10,14 +10,14 @@ splitAndMerge("Hello World!", ".")     ==  "H.e.l.l.o W.o.r.l.d.!"
 splitAndMerge("Hello World!", ",")     ==  "H,e,l,l,o W,o,r,l,d,!*/
 
 function splitAndMerge(str, sp) {
-    const words = str.split("");
+    const words = str.split(" ");
 
     const processedWords = words.map(word =>{
 
-        let eachChar = word.split('').join(sp);
+        const eachChar = word.split('').join(sp);
         return eachChar;
     })
-     const result = processedWords.join('');
+     const result = processedWords.join(' ');
      return result;
   }
 
