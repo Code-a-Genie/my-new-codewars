@@ -13,5 +13,19 @@ The correct answer would be 17.
 Hint: Don't forget to check for bad values like null/undefined*/
 
 function countSheeps(sheep) {
-    // TODO
+    const storeSheep=[];
+    for(let i=0; i<sheep.length; i++) {
+        let singleSheep = sheep[i];
+       
+        if(singleSheep === true) {
+            storeSheep.push(singleSheep);
+        }
   }
+    return storeSheep.length;
+}
+countSheeps([true,  true,  true,  false,
+    true,  true,  null,  true ,
+    true,  false, true,  false,
+    undefined,  false, false, true ,
+    true,  true,  true,  true ,
+    false, false, true,  true])
